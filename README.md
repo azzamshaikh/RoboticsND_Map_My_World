@@ -43,7 +43,7 @@ roslaunch main main.launch
 source devel/setup.bash  
 roslaunch my_robot mapping.launch
 ```
-4. To open the RTAB-MAP database, unzip and open.
+4. To open the RTAB-MAP database, the file can be found here: (https://drive.google.com/file/d/1ys6sD2BIQNrPNlnkLEZ7bY2QicRV1UpG/view?usp=sharing). Please copy the file into the src file, nunzip, and open.
 ```
 unzip rtabmap.zip
 rtabmap-databaseViewer /***preferred directory***/catkin_ws/src/rtabmap.db
