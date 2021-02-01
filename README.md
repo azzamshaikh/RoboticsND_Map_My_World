@@ -12,7 +12,7 @@ cd /***preferred directory***/catkin_ws/src
 catkin_init_workspace  
 ```
 
-2. Clone this repo in a different directory and move all files/folders EXCEPT 'Pictures' and 'README.md' to `catkin_ws/src`
+2. Clone this repo in a different directory and move all files/folders to `catkin_ws/src`
 ```
 cd /***preferred directory***  
 git clone https://github.com/azzamshaikh/RoboticsND_Map_My_World  
@@ -21,8 +21,6 @@ git clone https://github.com/azzamshaikh/RoboticsND_Map_My_World
 3. Due to the large size of the map.pgm file, they were zipped and will need to be unzipped
 ```
 cd /***preferred directory***/catkin_ws/src/my_robot/maps  
-unzip map.zip && rm map.zip  
-cd /***preferred directory***/catkin_ws/src/pgm_map_creator/maps  
 unzip map.zip && rm map.zip  
 ```
 
@@ -40,10 +38,11 @@ source devel/setup.bash
 roslaunch main main.launch
 ```
 ```
+cd /catkin_ws  
 source devel/setup.bash  
 roslaunch my_robot mapping.launch
 ```
-4. To open the RTAB-MAP database, the file can be found here: (https://drive.google.com/file/d/1ys6sD2BIQNrPNlnkLEZ7bY2QicRV1UpG/view?usp=sharing). Please copy the file into the src file, nunzip, and open.
+4. To open the RTAB-MAP database, the file can be found here: (https://drive.google.com/file/d/1ys6sD2BIQNrPNlnkLEZ7bY2QicRV1UpG/view?usp=sharing). Please copy the file into the src file, unzip, and open.
 ```
 unzip rtabmap.zip
 rtabmap-databaseViewer /***preferred directory***/catkin_ws/src/rtabmap.db
