@@ -1,0 +1,32 @@
+<launch>
+  <!-- Map Server Node -->
+  <arg name="map" default="$(find my_robot)/maps/map.yaml"/>
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map)"/>
+
+  <!-- AMCL Node -->
+  <node name="amcl" pkg="amcl" type="amcl" output="screen">
+
+    <!-- Odometry Parameters -->
+    <param name="odom_frame_id" value="odom"/>
+    <param name="odom_model_type" value="diff-corrected"/>
+    <param name="base_frame_id" value="robot_footprint"/>
+    <param name="global_frame_id" value="map"/>
+
+    <!-- Overall Filter Parameters -->
+
+    <!-- Define initital pose here -->
+    <param name="initial_pose_x" value="0"/>
+    <param name="initial_pose_y" value="0"/>
+    <param name="initial_pose_a" value="1.5707"/>
+    <param name="update_min_d" value="0.1"/>  <!-- initiate translational filter update faster --> 
+    <param name="update_min_a" value="0.261799"/> <!-- initiate rotational filter update faster -->
+    
+    <!-- Laser Parameters -->
+    <param name="laser_z_hit" value="0.95"/> <!-- provide max weigh to z hit parameter as map is static-->
+    <param name="laser_z_rand" value="0.05"/>  <!-- add some weight to the z rand parameter in case of unexplained readings -->
+    <param name="laser_max_beams" value="50"/> <!-- increase max beams to create a more accurate update -->
+    <!-- default min and max range are used -->
+
+  </node>
+
+</launch>
