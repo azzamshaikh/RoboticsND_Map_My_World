@@ -40,8 +40,10 @@ source devel/setup.bash
 roslaunch main main.launch
 ```
 ```
-cd /catkin_ws  
-catkin_make  
 source devel/setup.bash  
 roslaunch my_robot mapping.launch
 ```
+4. To open the RTAB-MAP database, unzip and open.
+```
+unzip rtabmap.zip
+rtabmap-databaseViewer /***preferred directory***/catkin_ws/src/rtabmap.db
