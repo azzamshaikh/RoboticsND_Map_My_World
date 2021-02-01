@@ -1,7 +1,7 @@
 # RoboticsND_Map_My_World
 Implement the RTAB-Map algorithm on a robot and create a 3-D map of my world (based on RoboticsND_Build_My_World)
 
-- insert image of 3-D map and loop closure images -
+![rtab](RTAB-Map_Database_Viewer.png)
 
 ## Instructions
 
