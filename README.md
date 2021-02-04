@@ -30,7 +30,7 @@ cd /***preferred directory***/catkin_ws/src
 git clone https://github.com/ros-teleop/teleop_twist_keyboard
 ````
 
-3. Go back to the `catkin_ws` directory and and launch the world and mapping algorithm. You will need two terminals.
+3. Go back to the `catkin_ws` directory and and launch the world/teleop packages and mapping algorithm. You will need two terminals.
 ```
 cd /catkin_ws  
 catkin_make  
@@ -42,7 +42,8 @@ cd /catkin_ws
 source devel/setup.bash  
 roslaunch my_robot mapping.launch
 ```
-4. To open the RTAB-MAP database, the file can be found here: (https://drive.google.com/file/d/1ys6sD2BIQNrPNlnkLEZ7bY2QicRV1UpG/view?usp=sharing). Please copy the file into the src file, unzip, and open.
+4. To open the RTAB-MAP database, the file can be found here: (https://drive.google.com/file/d/1iOatuBzopqTjq7I3WaE0TP4tGlxg-5Qk/view?usp=sharing). Please copy the file into the src file and open. 
 ```
-unzip rtabmap.zip
 rtabmap-databaseViewer /***preferred directory***/catkin_ws/src/rtabmap.db
+```
+5. The mesh generated from the database viewer is also available here: (https://drive.google.com/file/d/1PyacnGWZnS114Pl63yGpIUMCphqGjChL/view?usp=sharing)
